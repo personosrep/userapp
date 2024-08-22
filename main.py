@@ -8,6 +8,7 @@ load_dotenv()
 
 # Set the token.
 DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
+print(DISCORD_TOKEN + "a")
 
 # Define whatever this is.
 intents = discord.Intents.default()
