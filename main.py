@@ -1,13 +1,13 @@
 import discord
 from discord import app_commands
 from discord.ext import commands
-from dotenv import load_dotenv
+from dotenv import load_dotenv, find_dotenv
 import os
 
+# Connect the path with your '.env' file name
 load_dotenv()
 
-# Set the token.
-DISCORD_TOKEN = os.environ.gt("DISORD_TOKEN")
+DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
 
 # Define whatever this is.
 intents = discord.Intents.default()
@@ -20,7 +20,7 @@ bot = commands.Bot(command_prefix=".",intents=intents)
 @bot.tree.command(name="echo",description="echo text")
 async def slash_command(interaction:discord.Interaction, msg: str):
     
-    await interaction.response.send_message("**[[sʏsᴛᴇᴍ]](https://support.discord.com/hc/en-us/categories/115000168351-Safety-Privacy-and-Policy)**", ephemeral=True)
+    await interaction.response.send_message("‎", ephemeral=True)
 
     await interaction.followup.send(msg)
 
