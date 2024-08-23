@@ -7,6 +7,8 @@ import os
 # Connect the path with your '.env' file name
 load_dotenv()
 
+
+# Set the token.
 DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
 
 # Define whatever this is.
